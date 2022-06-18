@@ -1,5 +1,4 @@
 #usname, #pasw{
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -42,6 +41,7 @@ img.avatar {
 }
 .container {
     padding: 16px;
+    position: relative;
 
 }
 .modal {
@@ -105,10 +105,10 @@ img.avatar {
 }
 
 .regiform{
-    width: 100%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: flex;
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 6px;

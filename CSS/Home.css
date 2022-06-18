@@ -4,7 +4,7 @@
 
 }
 #vision{
-    padding-top: 100px;
+    padding-top: 5%;
 
 }
 #vision:hover{
@@ -12,7 +12,5 @@
 }
 .slideshow-container{
     padding-top: 20px;
-}
-#topnavhead{
-
+    width: 100%;
 }

@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/Navigation.css">
     <link rel="stylesheet" type="text/css" href="CSS/Register.css">
-    <title>Register</title>
+    <link rel="stylesheet"
+          href=
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register | ISS</title>
+    <link rel="shortcut icon" href="logo.png" type="x-icon>"
 </head>
 <body>
     <div class="topnav" id="myTopnav">
+        <h id="topnavhead"><img src="logo.png" width="54" height="54"/><b>IMPERIAL SECONDARY SCHOOL</b></h>
         <a href="Contacts.php">Contacts</a>
         <a href="Staff.php">Staff</a>
         <a href="Alumni.php">Alumni</a>
         <a href="Register.php" class="active">Register</a>
         <a href="About.php">About</a>
-        <a href="Home.php">Home</a>
-        <h id="topnavhead"><img src="logo.png" width="54" height="54"/><b>IMPERIAL SECONDARY SCHOOL</b></h>
-<!--        <a href="javascript:void(0);" class="icon" onclick="myFunction()">-->
-<!--            <i class="fa fa-bars"></i>-->
-<!--        </a>-->
+        <a href="index.php">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 
 
 <div class="rows">
 
     <div class="col_left">
-<h>LEFT</h>
+
     </div>
 
 
@@ -56,15 +60,23 @@
             <div class="modal-content animate" >
                 <div class="imgcontainer">
                     <button onclick="document.getElementById('popup').style.display='none'" class="close" title="Close Modal">&times;</button>
-<!--                    <img src="lock.png" alt="Avatar" class="avatar" height="212" width="100">-->
+
                 </div>
 
                 <form class="container" method="POST" action="LoginDB.php">
-                    <b>Username</b><br>
-                    <input type="text" placeholder="Enter Username" name="uname" id="usname" required><br>
 
-                    <b>Password</b><br>
+                    <div class="icons">
+                        <b>Username</b><br>
+                        <i class="fa fa-user icon"></i>
+                    <input type="text" placeholder="Enter Username" src="lock.png" name="uname" id="usname" required><br>
+                        </div>
+
+                    <div class="icons">
+                        <b>Password</b><br>
+                        <i class="fa fa-key icon"></i>
                     <input type="password" placeholder="Enter Password" name="pssw" id="pasw" required><br>
+                    </div>
+
                     <input type="checkbox" onclick="loginpass()">Show Password<br>
                     <center><input type="submit" id="popuplogin" value="Login"></center><br>
 
@@ -78,18 +90,19 @@
     </div>
 
     <div class="col_right">
-<h>Right</h>
+
 
     </div>
 
 </div>
 
 
-    <div class="footer">
+    <div class="col-xs-12" style="padding-top: 5%">
         <img src="ISS/IMPERIAL-BLOG.gif" width="100%" height="133"/>
 
     </div>
 
 <script src="JS/Register.js"></script>
+    <script src="JS/Navigation.js"></script>
 </body>
 </html>

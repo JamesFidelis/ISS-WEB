@@ -13,7 +13,9 @@ include("DBconnection.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/Navigation.css">
-    <title>Alumni List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Alumni List | ISS</title>
+    <link rel="shortcut icon" href="logo.png" type="x-icon>"
 </head>
 <body>
 <h1>Our School Dashboard</h1>
@@ -63,5 +65,6 @@ include("DBconnection.php");
     <button class="logout" > <a class="logout" href="Exit.php">Sign out</a></button>
 
 </div>
+<script src="JS/Navigation.js"></script>
 </body>
 </html>

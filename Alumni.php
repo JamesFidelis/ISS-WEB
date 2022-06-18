@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/Navigation.css">
     <link rel="stylesheet" type="text/css" href="CSS/Alumni.css">
-    <title>Alumni</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Alumni | ISS</title>
+    <link rel="shortcut icon" href="logo.png" type="x-icon>"
     <?php include('DBconnection.php'); ?>
 </head>
 <body>
@@ -16,10 +18,10 @@
     <a href="Alumni.php" class="active">Alumni</a>
     <a href="Register.php" >Register</a>
     <a href="About.php" >About</a>
-    <a href="Home.php">Home</a>
-<!--    <a href="javascript:void(0);" class="icon" onclick="myFunction()">-->
-<!--        <i class="fa fa-bars"></i>-->
-<!--    </a>-->
+    <a href="index.php">Home</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
 </div>
 
 <div class="rows">
@@ -96,9 +98,10 @@
 </div>
 
 
-<div class="footer">
+<div class="col-xs-12" style="padding-top: 5%">
     <img src="ISS/IMPERIAL-BLOG.gif" width="100%" height="133"/>
 
 </div>
+<script src="JS/Navigation.js"></script>
 </body>
 </html>
