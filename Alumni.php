@@ -11,22 +11,19 @@
     <?php include('DBconnection.php'); ?>
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-    <h id="topnavhead"><img src="logo.png" width="54" height="54"/><b>IMPERIAL SECONDARY SCHOOL</b></h>
-    <a href="Contacts.php" >Contacts</a>
-    <a href="Staff.php" >Staff</a>
-    <a href="Alumni.php" class="active">Alumni</a>
-    <a href="Register.php" >Register</a>
-    <a href="About.php" >About</a>
-    <a href="index.php">Home</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
+<?php
+session_start();
+if (empty($_SESSION['User'])){
+    include('navigation.php');
+}
+else {
+    include('navigationLogOut.php');
+}
+?>
 
 <div class="rows">
     <div class="col_left">
-        <h>LEFT</h>
+
     </div>
     <div class="col_mid">
       <center>  <h>Alumni Records</h></center>
@@ -93,7 +90,7 @@
 
 
     <div class="col_right">
-        <h>RIGHT</h>
+
     </div>
 </div>
 

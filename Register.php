@@ -12,20 +12,15 @@
     <link rel="shortcut icon" href="logo.png" type="x-icon>"
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <h id="topnavhead"><img src="logo.png" width="54" height="54"/><b>IMPERIAL SECONDARY SCHOOL</b></h>
-        <a href="Contacts.php">Contacts</a>
-        <a href="Staff.php">Staff</a>
-        <a href="Alumni.php">Alumni</a>
-        <a href="Register.php" class="active">Register</a>
-        <a href="About.php">About</a>
-        <a href="index.php">Home</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-
+<?php
+session_start();
+if (empty($_SESSION['User'])){
+    include('navigation.php');
+}
+else {
+    include('navigationLogOut.php');
+}
+?>
 <div class="rows">
 
     <div class="col_left">
@@ -44,7 +39,7 @@
         <input type="date" name="dates" id="dob" class="regiform" value="dd/MM/yyyy" required><br>
         <input type="password" name="pass" id="password" class="regiform" placeholder="Password" required><br>
         <input type="checkbox" onclick="showpass()">Show Password<br>
-        Upload CV <input type="file" name="CVupload" id="CVupload" value="CV HERE" required><br>
+        Upload CV <input type="file" name="CVuploads" id="CVupload" value="CV HERE" required><br>
         <h><strong>Contacts:</strong></h><br>
         <input type="email" name="mail" id="emails" class="regiform" placeholder="Enter E-mail here" required><br>
         <input type="text" name="mnum" id="phone" class="regiform" placeholder="Phone Number" required><br>
@@ -67,13 +62,11 @@
 
                     <div class="icons">
                         <b>Username</b><br>
-                        <i class="fa fa-user icon"></i>
                     <input type="text" placeholder="Enter Username" src="lock.png" name="uname" id="usname" required><br>
                         </div>
 
                     <div class="icons">
                         <b>Password</b><br>
-                        <i class="fa fa-key icon"></i>
                     <input type="password" placeholder="Enter Password" name="pssw" id="pasw" required><br>
                     </div>
 

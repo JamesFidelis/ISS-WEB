@@ -6,25 +6,22 @@
     <link rel="stylesheet" type="text/css" href="CSS/Navigation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>About | ISS</title>
-    <link rel="shortcut icon" href="logo.png" type="x-icon>"
+    <link rel="shortcut icon" href="logo.png" type="x-icon">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <h id="topnavhead"><img src="logo.png" width="54" height="54"/><b>IMPERIAL SECONDARY SCHOOL</b></h>
-        <a href="Contacts.php">Contacts</a>
-        <a href="Staff.php">Staff</a>
-        <a href="Alumni.php">Alumni</a>
-        <a href="Register.php" >Register</a>
-        <a href="About.php" class="active">About</a>
-        <a href="index.php">Home</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+<?php
+session_start();
+if (empty($_SESSION['User'])){
+    include('navigation.php');
+}
+else {
+    include('navigationLogOut.php');
+}
+?>
 
-    <div class="rows-1">
+    <div class="rows-1" style="padding-left: 5%; padding-right: 5%;">
         <div class="col-xs-6 col-md-3">
-            <h4>OUR COMMUNITY AND CULTURE</h4>
+            <h4 align="center">OUR COMMUNITY AND CULTURE</h4>
             <p>
                 Our school is at the heart of the village, It is safe and welcoming.
                 The school has a caring and supportive atmosphere and upholds our traditional values.
@@ -36,7 +33,7 @@
             </p>
         </div>
         <div class="col-xs-6">
-            <h4>ABOUT OUR SCHOOL</h4>
+            <h4 align="center">ABOUT OUR SCHOOL</h4>
             <p>Imperial Secondary School (ISS), is a Co-educational full boarding school with a spirit,
                 where everyday activities are dynamic and engaging, where ordinary people do unexpected
                 and exciting things. The school is on a sprawling 37 acres campus located on
@@ -46,7 +43,7 @@
             </p>
         </div>
         <div class="col-md-3">
-            <h4>THE STUDENTS</h4>
+            <h4 align="center">THE STUDENTS</h4>
             <p>Our students are happy and well behaved, They have high aspirations,
                 work hard and achieve to the highest of their abilities. They are able
                 to work independently as well as co-operatively with others and develop
@@ -56,17 +53,17 @@
         </div>
     </div>
 
-    <div class="rows-2">
+    <div class="rows-2" style="padding-left: 5%; padding-right: 5%;">
 
         <div class="col-xs-6 col-md-3">
-            <h4>OUR TEACHERS</h4>
+            <h4 align="center">OUR TEACHERS</h4>
             <p>Our teachers are outstanding. They inspire through exciting and challenging lessons and seek out
                 and share good practice. We have a reputation for developing our staff and encouraging them to excel.
                 All staff embody the school’s aims and values.
             </p>
         </div>
         <div class="col-xs-6">
-            <h4>OUR MISSION</h4>
+            <h4 align="center">OUR MISSION</h4>
             <p>The Imperial Secondary School (ISS) is committed to providing an education of excellence<
                 that meets each student’s interests, abilities and needs within a common curricular
                 framework and reflects and promotes an understanding of, and appreciation for, diversity
@@ -81,7 +78,7 @@
         </div>
         <div class="col-md-3">
 
-            <h4>OUR PASTORAL TEAM</h4>
+            <h4 align="center">OUR PASTORAL TEAM</h4>
             <p>
                 Our pastoral team is very caring and affectionate.
                 They spend lot of time with the students and ensure that students are comfortable
@@ -92,9 +89,9 @@
 
     </div>
 
-    <div class="rows-3">
+    <div class="rows-3" style="padding-left: 5%; padding-right: 5%;">
         <div class="col-xs-6">
-            <h4>OUR PARENTS</h4>
+            <h4 align="center">OUR PARENTS</h4>
             <p>
                 Parents and teachers work together to support and encourage children.
                 Parents are actively involved in their children’s education and support the
@@ -104,7 +101,7 @@
         </div>
         <div class="col-xs-6">
 
-            <h4>OUR ENVIRONMENT</h4>
+            <h4 align="center">OUR ENVIRONMENT</h4>
             <p>We have eco-friendly buildings and grounds are clean, attractive, safe and
                 welcoming to children, parents and visitors. The massive Plantation drive is on
                 and the lawns are coming up. They are an integral part of children’s learning.

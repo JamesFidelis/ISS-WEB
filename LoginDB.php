@@ -13,7 +13,7 @@ if($thisquery)
     {
         if(($user == $mydata['Username'])&&($pass == $mydata['Password']))
         {
-            //echo "Login Successful";
+
             session_start();
             $_SESSION['User'] = $user;
             header("location:AlumniList.php");

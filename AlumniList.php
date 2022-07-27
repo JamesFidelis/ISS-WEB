@@ -18,6 +18,15 @@ include("DBconnection.php");
     <link rel="shortcut icon" href="logo.png" type="x-icon>"
 </head>
 <body>
+<?php
+session_start();
+if (empty($_SESSION['User'])){
+    include('navigation.php');
+}
+else {
+    include('navigationLogOut.php');
+}
+?>
 <h1>Our School Dashboard</h1>
 
 
@@ -61,10 +70,6 @@ include("DBconnection.php");
 </table>
 <br>
 <br>
-<div align="center">
-    <button class="logout" > <a class="logout" href="Exit.php">Sign out</a></button>
-
-</div>
 <script src="JS/Navigation.js"></script>
 </body>
 </html>

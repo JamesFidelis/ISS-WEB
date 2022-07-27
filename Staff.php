@@ -10,23 +10,21 @@
     <link rel="shortcut icon" href="logo.png" type="x-icon>"
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-    <h id="topnavhead"><img src="logo.png" width="54" height="54"/><b>IMPERIAL SECONDARY SCHOOL</b></h>
-    <a href="Contacts.php">Contacts</a>
-    <a href="Staff.php" class="active">Staff</a>
-    <a href="Alumni.php">Alumni</a>
-    <a href="Register.php" >Register</a>
-    <a href="About.php" >About</a>
-    <a href="index.php">Home</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
+<?php
+session_start();
+if (empty($_SESSION['User'])){
+    include('navigation.php');
+}
+else {
+    include('navigationLogOut.php');
+}
+?>
 
 <h2 style="padding-top: 5%;" align="center">OUR STAFF</h2>
 
-<div class="staff-rows">
-    <div class="row-1">
+    <div class="staff-rowd">
+    <div class="column">
+        <div class="content">
         <center>
         <img src="Staff/Aditya.jpg" width="160" height="160"/>
        <p> <strong><h>CEO</h></strong><br>
@@ -36,8 +34,11 @@
            odit nam eligendi culpa sed doloribus odit ea consequatur.
            </center>
        </p>
+        </div>
     </div>
-    <div class="row-1">
+
+    <div class="column">
+        <div class="content">
         <center>
         <img src="Staff/principal.jpg" width="156" height="156"/>
        <p> <strong><h>Principal</h></strong><br>
@@ -46,8 +47,11 @@
             voluptas molestiae et porro optio. Qui molestiae quo dolor
             odit nam eligendi culpa sed doloribus odit ea consequatur.
         </center></p>
+        </div>
     </div>
-    <div class="row-1">
+
+    <div class="column">
+        <div class="content">
         <center>
         <img src="Staff/vice.jpg" width="156" height="156"/>
         <p> <strong><h>Vice Principal</h></strong><br>
@@ -58,7 +62,10 @@
             </center>
         </p>
     </div>
-    <div class="row-1">
+    </div>
+
+    <div class="column">
+        <div class="content">
         <center>
         <img src="Staff/eric.jpg" width="156" height="156"/>
         <p> <strong><h>Administrator</h></strong><br>
@@ -69,8 +76,12 @@
         </center>
         </p>
     </div>
-</div><div class="staff-rows" style="padding-top: 1%;">
-    <div class="row-2">
+</div>
+</div>
+
+    <div class="staff-rowd" style="padding-top: 1%;">
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/lady1.jpg" width="156" height="156"/>
        <p> <strong><h>Secretary</h></strong><br>
@@ -82,8 +93,10 @@
        </p>
 
     </div>
+        </div>
 
-    <div class="row-2">
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/gymlady.jpg" width="156" height="156"/>
         <p> <strong><h>Coach</h></strong><br>
@@ -94,7 +107,10 @@
             </center>
         </p>
     </div>
-    <div class="row-2">
+        </div>
+
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/gym.webp" width="156" height="156"/>
         <p> <strong><h>Coach</h></strong><br>
@@ -105,7 +121,10 @@
             </center>
         </p>
     </div>
-    <div class="row-2">
+        </div>
+
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/lady2.jpg" width="156" height="156"/>
         <p> <strong><h>Teacher</h></strong><br>
@@ -116,8 +135,14 @@
             </center>
         </p>
     </div>
-</div></div><div class="staff-rows" style="padding-top: 1%;">
-    <div class="row-2">
+
+</div>
+    </div>
+
+    <div class="staff-rowd" style="padding-top: 1%;">
+
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/lady3.jpg" width="156" height="156"/>
        <p> <strong><h>Teacher</h></strong><br>
@@ -128,7 +153,10 @@
         </center>
        </p>
     </div>
-    <div class="row-2">
+        </div>
+
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/Tom.jpg" width="156" height="156"/>
         <p> <strong><h>Teacher</h></strong><br>
@@ -139,7 +167,10 @@
             </center>
         </p>
     </div>
-    <div class="row-2">
+        </div>
+
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/guy1.jpg" width="156" height="156"/>
         <p> <strong><h>Teacher</h></strong><br>
@@ -150,7 +181,10 @@
             </center>
         </p>
     </div>
-    <div class="row-2">
+        </div>
+
+        <div class="column">
+            <div class="content">
         <center>
         <img src="Staff/guy2.jpg" width="156" height="156"/>
         <p> <strong><h>Teacher</h></strong><br>
@@ -162,11 +196,15 @@
         </p>
     </div>
 </div>
+    </div>
+
+
 
 <div class="col-xs-12" style="padding-top: 5%">
     <img src="ISS/IMPERIAL-BLOG.gif" width="100%" height="133"/>
 
 </div>
+
 <script src="JS/Navigation.js"></script>
 <script src="JS/Navigation.js"></script>
 </body>
