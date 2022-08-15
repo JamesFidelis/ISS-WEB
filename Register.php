@@ -19,6 +19,7 @@ if (empty($_SESSION['User'])){
 }
 else {
     include('navigationLogOut.php');
+    header("location:index.php");
 }
 ?>
 <div class="rows">

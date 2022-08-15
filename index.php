@@ -9,7 +9,6 @@
     <title>Home | ISS</title>
     <link rel="shortcut icon" href="logo.png" type="x-icon>"
 </head>
-
 <body>
 
 <?php
